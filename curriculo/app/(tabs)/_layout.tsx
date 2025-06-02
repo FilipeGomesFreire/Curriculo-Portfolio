@@ -1,43 +1,59 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
-
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Icon } from 'react-native-elements';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
+          ios: { position: 'absolute' },
           default: {},
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name="(tabs)/index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Icon name="home" type="feather" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="(tabs)/sobre"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Sobre',
+          tabBarIcon: ({ color }) => <Icon name="info" type="feather" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(tabs)/experiencia-academica"
+        options={{
+          title: 'Acadêmica',
+          tabBarIcon: ({ color }) => <Icon name="book" type="feather" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(tabs)/experiencia-profissional"
+        options={{
+          title: 'Profissional',
+          tabBarIcon: ({ color }) => <Icon name="briefcase" type="feather" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(tabs)/projetos"
+        options={{
+          title: 'Projetos',
+          tabBarIcon: ({ color }) => <Icon name="code" type="feather" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(tabs)/jogo"
+        options={{
+          title: 'Senha',
+          tabBarIcon: ({ color }) => <Icon name="lock" type="feather" color={color} />,
         }}
       />
     </Tabs>
