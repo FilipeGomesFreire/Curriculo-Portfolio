@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "curriculo",
-    "slug": "curriculo",
+    "slug": "curriculoapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1f77d612-8e3b-4fe3-8ebc-67dddf192405"
+      }
+    },
+    "owner": "filipegomes"
   }
 }

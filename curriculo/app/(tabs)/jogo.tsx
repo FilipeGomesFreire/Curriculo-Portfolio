@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, StyleSheet, Alert, ScrollView } from 'react-native';
+import VoltarHome from '@/components/VoltarHome';
 
 export default function JogoSenha() {
   const [senha, setSenha] = useState(gerarSenhaAleatoria(4));
@@ -29,7 +30,7 @@ export default function JogoSenha() {
   // Verifica se os dígitos são únicos
   const tentativaSet = new Set(tentativa.split(''));
   if (tentativaSet.size !== tentativa.length) {
-    Alert.alert('Erro', 'Os dígitos não podem se repetir!');
+    Alert.alert('Erro', 'Os dígitos não podem se repetir!'); //não tinha entendido bem o jogo e tentei isso kkkkk 
     return;
   }
 
@@ -117,6 +118,8 @@ export default function JogoSenha() {
 
       <Text style={styles.label}>Tentativas restantes: {tentativasRestantes}</Text>
 
+    
+
       <FlatList
         data={tentativas.map((tent, index) => ({ key: `${index}`, tentativa: tent, resultado: resultados[index] }))}
         renderItem={({ item }) => (
@@ -124,7 +127,9 @@ export default function JogoSenha() {
         )}
         ListEmptyComponent={<Text style={styles.label}>Nenhuma tentativa ainda.</Text>}
       />
+        <VoltarHome />
     </ScrollView>
+    
   );
 }
 

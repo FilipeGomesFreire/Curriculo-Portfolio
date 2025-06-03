@@ -1,28 +1,50 @@
 import { View, Text, StyleSheet } from 'react-native';
+import VoltarHome from '@/components/VoltarHome';
+import { ScrollView } from 'react-native';
 
 export default function ExperienciaProfissional() {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Experiência Profissional</Text>
 
       <View style={styles.bloco}>
-        <Text style={styles.cargo}>Estágio em Desenvolvimento Web</Text>
-        <Text style={styles.empresa}>Instituto Federal do Piauí</Text>
-        <Text style={styles.periodo}>Fev/2024 – Atual</Text>
+        <Text style={styles.cargo}>Auxiliar Adminisrtativo</Text>
+        <Text style={styles.empresa}>Contax</Text>
+        <Text style={styles.periodo}>2008 – 2010</Text>
         <Text style={styles.desc}>
-          Desenvolvimento de aplicações web com React, Node.js e integração com APIs.
+          Suporte e atendimento ao cliente.
         </Text>
       </View>
 
       <View style={styles.bloco}>
-        <Text style={styles.cargo}>Freelancer em Automação IoT</Text>
-        <Text style={styles.empresa}>Projetos pessoais</Text>
-        <Text style={styles.periodo}>2022 – Atual</Text>
+        <Text style={styles.cargo}>Auxiliar Adminisrtativo</Text>
+        <Text style={styles.empresa}>Escola Adventista de San Martin</Text>
+        <Text style={styles.periodo}>2011 – 2013</Text>
         <Text style={styles.desc}>
-          Projetos com ESP32 e Arduino, incluindo sistemas de acesso, automação residencial e sensores.
+          Na prática eu dava aulas de informatica, era o cara do TI e tudo.
         </Text>
       </View>
-    </View>
+
+            <View style={styles.bloco}>
+        <Text style={styles.cargo}>Auxiliar Adminisrtativo</Text>
+        <Text style={styles.empresa}>Recife Sexshop</Text>
+        <Text style={styles.periodo}>2017 – 2021</Text>
+        <Text style={styles.desc}>
+          Gerenciava uma rede de 5 sexshops junto com um estoque.
+        </Text>
+      </View>
+      
+                  <View style={styles.bloco}>
+        <Text style={styles.cargo}>Estagiario em Desenvolvimento</Text>
+        <Text style={styles.empresa}>Hidramac</Text>
+        <Text style={styles.periodo}>Mai/2025 – atual</Text>
+        <Text style={styles.desc}>
+          Ajudo em desenvolvimento, criações de placas de circuito impresso e eletrica automotiva.
+        </Text>
+      </View>
+      
+<VoltarHome />
+    </ScrollView>
   );
 }
 
@@ -30,6 +52,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     gap: 20,
+    backgroundColor: '#e0e0e0',
+    minHeight: '100%',
   },
   title: {
     fontSize: 22,

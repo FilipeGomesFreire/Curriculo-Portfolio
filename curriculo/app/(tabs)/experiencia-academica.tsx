@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
+import VoltarHome from '@/components/VoltarHome';
 
 export default function ExperienciaAcademica() {
   return (
@@ -7,16 +8,19 @@ export default function ExperienciaAcademica() {
 
       <View style={styles.bloco}>
         <Text style={styles.curso}>Sistemas para Internet</Text>
-        <Text style={styles.instituicao}>Instituto Federal do Piauí (IFPI)</Text>
-        <Text style={styles.periodo}>2022 – Atual</Text>
+        <Text style={styles.instituicao}>Universidade Católica de Pernambuco(UNICAP)</Text>
+        <Text style={styles.periodo}>2023.2 – Atual</Text>
       </View>
 
       <View style={styles.bloco}>
-        <Text style={styles.curso}>Ensino Médio Técnico em Informática</Text>
-        <Text style={styles.instituicao}>ETEC - Escola Técnica Estadual</Text>
-        <Text style={styles.periodo}>2018 – 2020</Text>
+        <Text style={styles.curso}>Python Basico</Text>
+        <Text style={styles.instituicao}>DSA - DATA SCIENCE ACADEMY</Text>
+        <Text style={styles.periodo}>24 horas</Text>
       </View>
+     
+      <VoltarHome />
     </View>
+    
   );
 }
 
@@ -24,6 +28,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     gap: 20,
+     backgroundColor: '#e0e0e0',
+    minHeight: '100%',
   },
   title: {
     fontSize: 22,
